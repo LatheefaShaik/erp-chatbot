@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ERPChatbot4")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2152b9fdba774653cc8b96167dbd25603ba45ca0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ERPChatbot4")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ERPChatbot4")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

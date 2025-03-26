@@ -131,3 +131,4 @@ F:\WebAPI\ERPChatbot4\ERPChatbot4\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbst
 F:\WebAPI\ERPChatbot4\ERPChatbot4\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
 F:\WebAPI\ERPChatbot4\ERPChatbot4\bin\Debug\net8.0\RBush.dll
 F:\WebAPI\ERPChatbot4\ERPChatbot4\bin\Debug\net8.0\SixLabors.Fonts.dll
+F:\WebAPI\ERPChatbot4\ERPChatbot4\obj\Debug\net8.0\ERPChatbot4.sourcelink.json

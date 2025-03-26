@@ -1,4 +1,5 @@
-﻿using Microsoft.ML;
+﻿using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms;
+using Microsoft.ML;
 using Microsoft.ML.Data;
 
 namespace ERPChatbot4.MLModels
@@ -27,18 +28,20 @@ namespace ERPChatbot4.MLModels
             };
 
             //Loading the data and creating the pipeline
-            var trainingData = _mlContext.Data.LoadFromEnumerable(data); 
+            var trainingData = _mlContext.Data.LoadFromEnumerable(data);  //Loads the list of sample data (data) into ML.NET as a dataset for training.
 
             // Using Multi-class Classification Trainer
             var pipeline = _mlContext.Transforms.Conversion.MapValueToKey("Answer")  //Converts the Answer column into a key for multi-class classification.
                           .Append(_mlContext.Transforms.Text.FeaturizeText("Features", "Question")) //Transforms the Question into a feature vector
-                          .Append(_mlContext.MulticlassClassification.Trainers.SdcaMaximumEntropy("Answer", "Features"))
+                          .Append(_mlContext.MulticlassClassification.Trainers.SdcaMaximumEntropy("Answer", "Features"))  //SDCA algo used to classify questions into categories.
                           .Append(_mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
 
             //Model training and prediction Engine creation
             try
             {
-                var model = pipeline.Fit(trainingData);  //model is trained using sample data provided in-memory using LoadFromEnumerable().
+                var model = pipeline.Fit(trainingData);  //pipeline is trained on the provided data.
+
+
 
                 _predictionEngine = _mlContext.Model.CreatePredictionEngine<InputData, OutputData>(model);  
             }
